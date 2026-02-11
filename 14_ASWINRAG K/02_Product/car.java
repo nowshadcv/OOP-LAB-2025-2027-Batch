@@ -1,4 +1,4 @@
-package mca_s2_27;
+package OOPLAB;
 
 public class car {
 		public static void main(String[] args) {
@@ -21,4 +21,5 @@ public class car {
 		p.display();
 
 	}}
+
 
