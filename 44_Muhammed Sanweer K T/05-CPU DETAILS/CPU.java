@@ -1,8 +1,7 @@
-package MODULE_1;
 
 import java.util.Scanner;
 
-public class cpudetails {
+public class CPU {
 
     double price;
 
