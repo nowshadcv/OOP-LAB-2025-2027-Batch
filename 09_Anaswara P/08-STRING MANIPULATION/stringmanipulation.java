@@ -15,12 +15,13 @@ public class stringmanipulation {
 		System.out.println(strSample4 + "\t");
 		System.out.println("3rd char of"+strSample4+"is:"+strSample4.charAt(2));
 		char buf[]=new char[3];
-		strSample4.getChars(2,3,buf,0);
+		strSample4.getChars(2,5,buf,0);
 		System.out.println("Extracted chars:"+strSample4+""+new String(buf));
 		String strSample="Rockstar";
 		System.out.print(strSample.compareTo("ROCKSTAR")+"\t");
 		System.out.println(strSample.compareToIgnoreCase("ROCKSTAR")+"\t");
 		System.out.print(strSample.equals("ROCKSTAR")+"\t");
+		System.out.println(strSample.equalsIgnoreCase("ROCKSTAR")+"\t");
 		System.out.println("Rockstar starts with 'Ro':"+strSample.startsWith("Ro"));
 		System.out.println("Rockstar ends with 'star':"+strSample.endsWith("star"));
 		System.out.println("Rockstar contains 'tar':"+strSample.contains("tar"));
@@ -38,3 +39,4 @@ public class stringmanipulation {
 		System.out.println(a+b);
 	}
 }
+
