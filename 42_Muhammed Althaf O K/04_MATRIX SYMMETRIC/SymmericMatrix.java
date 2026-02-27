@@ -1,4 +1,4 @@
-package matrix;
+package OOPLAB;
 import java.util.Scanner;
 public class SymmericMatrix {
 	public static void main(String[]args) {
@@ -37,3 +37,4 @@ public class SymmericMatrix {
 	}
     		   
 }
+
