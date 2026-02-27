@@ -1,4 +1,4 @@
-package Program2;
+package OOPLAB;
 
 public class product {
 
@@ -47,4 +47,5 @@ public class product {
 		p.display();
 }
 }
+
 
