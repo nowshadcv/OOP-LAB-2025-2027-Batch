@@ -35,8 +35,10 @@ class CPU {
 			double s=sc.nextDouble();
 			System.out.println("Processor cache=" + processor.getCache(c));
 			System.out.println("RAM Clock speed=" + ram.getClockspeed(s));
+			sc.close();
 		}
 	}
+
 
 
 
