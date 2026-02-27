@@ -6,7 +6,7 @@ public class StringManipulation {
 		char arrSample[] = {'R','O','S','E'};
 		String strSample1 = new String(arrSample);
 		System.out.print(strSample1 + "\t");
-		System.out.println("Length of "+strSample1 + "is: " + strSample1.length());
+		System.out.println("Length of "+strSample1 + " is: " + strSample1.length());
 		byte ascii[] = { 65 , 66 , 67 , 68 , 69 , 70 };
 		String strSample2 = new String (ascii);
 		System.out.print(strSample2+"\t");
@@ -41,3 +41,4 @@ public class StringManipulation {
 	}
 
 }
+
