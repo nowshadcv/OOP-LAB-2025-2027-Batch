@@ -1,73 +1,58 @@
 package OOPLAB;
-
-public class product 
-{
-	String pname,pcode;
-	int price;
-	public product()
-	{
+import java.util.Scanner;
+public class product {
+	static class Product {
+		String pname, pcode;
+		int price;
+		public Product(String pname, String pcode, int price) {
+			this.pname = pname;
+			this.pcode = pcode;
+			this.price = price;}
+		public int getPrice() {
+			return price;}
+		public void display() {
+			System.out.println("Product Code: " + pcode);
+			System.out.println("Product Name: " + pname);
+			System.out.println("Price: " + price);
+			System.out.println(); }}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		
-	}
-	public product(String pname,String pcode,int price)
-	{
-		this.pname=pname;
-		this.pcode=pcode;
-		this.price=price;
-	}
-	public void setpname(String pname)
-	{
-		this.pname=pname;
-	}
-	public String getpcode()
-	{
-		return pcode;
-	}
-	public String getpname()
-	{
-		return pname;
-	}
-	public void setpcode(String pcode)
-	{
-		this.pcode=pcode;
-	}
-	public int getprice()
-	{
-		return price;
-	}
-	public void setprice(int price)
-	{
-		this.price=price;
-	
-	}
-	public void display()
-	{
-		System.out.println("pcode:"+this.pcode);
-		System.out.println("pname:"+this.pname);
-		System.out.println("price:"+this.price);
-	}
-	
+		System.out.println("Enter details for Car 1:");
+		System.out.print("Enter Car Name: ");
+		String name1 = sc.next();
+	    System.out.print("Enter Car Code: ");
+	    String code1 = sc.next();
+	    System.out.print("Enter Price: ");
+	    int price1 = sc.nextInt();
+	    
+	    System.out.println("\nEnter details for Car 2:");
+	    System.out.print("Enter Car Name: ");
+	    String name2 = sc.next();
+	    System.out.print("Enter Car Code: ");
+	    String code2 = sc.next();
+	    System.out.print("Enter Price: ");
+	    int price2 = sc.nextInt();
 
-		public static void main(String args[])
-		{
-			product p1=new product();
-			p1.pcode="car123";
-			p1.pname="benz";
-			p1.price=10000;
-			System.out.println("\ndisplaying p1:");
-			p1.display();
-			
-			product p2=new product("jaguar","car426",25000);
-			System.out.println("\ndisplaying p2:");
-			p2.display();
-			
-			product p3=new product("maruthi","car800",50000);
-			System.out.println("\ndisplaying p3:");
-			p2.display();
-		
-			product p=p3.getprice()<(p1.price<p2.price?p1.price:p2.price)?p3:(p1.price<p2.price?p1:p2);
-			System.out.println("\ndisplaying product with lower price:");
-			p.display();
-		}
+	    System.out.println("\nEnter details for Car 3:");
+	    System.out.print("Enter Car Name: ");
+	    String name3 = sc.next();
+	    System.out.print("Enter Car Code: ");
+	    String code3 = sc.next();
+	    System.out.print("Enter Price: ");
+	    int price3 = sc.nextInt();
 
+	    Product p1 = new Product(name1, code1, price1);
+	    Product p2 = new Product(name2, code2, price2);
+	    Product p3 = new Product(name3, code3, price3);
+
+	    System.out.println("\n--- Car Details ---");
+	    p1.display();
+	    p2.display();
+	    p3.display();
+ 
+	    Product lowest = p3.getPrice()<(p1.price<p2.price?p1.price:p2.price)?p3 : (p1.price<p2.price?p1:p2); 
+	    System.out.println("--- Car with Lowest Price ---");
+	    lowest.display();
+	    }
 	}
-
