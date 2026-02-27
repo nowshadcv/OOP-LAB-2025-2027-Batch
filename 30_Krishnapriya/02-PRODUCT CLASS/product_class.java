@@ -1,4 +1,3 @@
-
 package OOPLAB;
 import java.util.Scanner;
 public class car_product {
@@ -57,3 +56,4 @@ public class car_product {
 	    lowest.display();
 	    }
 	}
+
