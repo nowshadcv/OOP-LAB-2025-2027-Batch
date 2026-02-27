@@ -1,4 +1,4 @@
-package Program5;
+package OOPLAB;
 
 import java.util.Scanner;
 
@@ -42,3 +42,4 @@ public class CPU {
 	}
 	
 }
+
