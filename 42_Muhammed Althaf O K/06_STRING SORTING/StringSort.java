@@ -1,4 +1,4 @@
-package Program6;
+package OOPLAB;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -37,3 +37,4 @@ public class StringSort {
 	}
 
 }
+
