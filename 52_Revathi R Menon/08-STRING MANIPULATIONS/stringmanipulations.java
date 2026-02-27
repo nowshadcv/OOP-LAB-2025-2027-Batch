@@ -14,7 +14,7 @@ public class StringManipulation {
 		System.out.print(strSample3+"\t");
 		String strSample4 = strSample1 + strSample2;
 		System.out.print(strSample4+"\t");
-		System.out.println("3rd Char of "+strSample4+"is: "+strSample4.charAt(2));
+		System.out.println("3rd Char of "+strSample4+" is: "+strSample4.charAt(2));
 		char buf[] = new char[3];
 		strSample4.getChars(2,5,buf,0);
 		System.out.println("Extracted Chars: "+strSample4+""+new String(buf));
@@ -41,4 +41,5 @@ public class StringManipulation {
 	}
 
 }
+
 
