@@ -1,4 +1,4 @@
-package Program8;
+package OOPLAB;
 
 public class StringManipulation {
 	public static void main(String[] args) {
@@ -45,4 +45,5 @@ public class StringManipulation {
 		int b=Integer.valueOf(iVal);
 		System.out.println(a+b);
 	}
+
 }
