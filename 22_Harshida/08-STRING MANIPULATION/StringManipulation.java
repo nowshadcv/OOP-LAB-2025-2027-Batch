@@ -1,7 +1,7 @@
 package OOPLAB;
 
 public class StringManipulation { 
-	public static void main(String[] args){ char arrSample[] = { 'R', '0','S','E' }; 
+	public static void main(String[] args){ char arrSample[] = { 'R', 'O','S','E' }; 
 	String strSample1 = new String ( arrSample );
 	System.out.print(strSample1+ "\t"); 
 	System.out.println("Length of " + strSample1 +"is:"+ strSample1.length());
@@ -38,3 +38,4 @@ public class StringManipulation {
 	System.out.println(a+b); 
 	}
 }
+
