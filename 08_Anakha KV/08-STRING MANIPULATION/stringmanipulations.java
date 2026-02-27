@@ -1,6 +1,6 @@
-package program8;
+package OOPLAB;
 
-public class stringmal{
+public class stringmanipulations{
 
 	public static void main(String[] args) {
 		char arrSample[] = {'R','O','S','E' };
@@ -40,4 +40,5 @@ public class stringmal{
 		System.out.println(a+b);
 
 	}
+
 }
