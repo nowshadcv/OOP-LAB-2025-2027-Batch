@@ -55,6 +55,8 @@ public class EmployeeArrayObject {
 			}
 		}
 		if(!found)
-			System.out.println("Employee Not Found...");	
+			System.out.println("Employee Not Found...");
+		sc.close();
+		scemp.close();
 	}
 }
