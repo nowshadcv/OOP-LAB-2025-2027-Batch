@@ -65,6 +65,8 @@ public class TeacherArrObjects {
 		for(teacher x:teacher) {
 			x.display();
 			System.out.println("\n");
+	    sc.close();
 		}
 	}
+
 }
