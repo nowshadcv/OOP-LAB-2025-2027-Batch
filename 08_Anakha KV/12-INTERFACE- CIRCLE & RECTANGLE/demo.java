@@ -34,7 +34,7 @@ class Rectangle implements AP{
 }
 
 
-public class demo{
+public class IFaceDemo{
 	public static void main(String[] args) {
 		int ch;
 		Circle c = new Circle();
