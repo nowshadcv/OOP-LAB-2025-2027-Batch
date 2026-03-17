@@ -81,8 +81,8 @@ public class IFaceDemo {
                     r.input();
                     r.perimeter();
                     break;
-
-             
+                case 5:
+				    break lp;
                 default:
                     System.out.println("Invalid choice! Please try again.");
             }
