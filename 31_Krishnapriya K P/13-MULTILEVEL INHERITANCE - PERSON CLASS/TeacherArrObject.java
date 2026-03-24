@@ -66,7 +66,7 @@ public  class TeacherArrObject{
 			System.out.println("Enter details of Teacher " + (i + 1));
 			System.out.println("Enter Teacher id (integer): ");
 			tid= sc.nextInt();
-			System.out.println("Enter Employee id of Teacher " + (i + 1) + " (integer0): ");
+			System.out.println("Enter Employee id of Teacher " + (i + 1) + " (integer): ");
 			empid= sc.nextInt();
 			System.out.println("Enter Teacher name (String): ");
 			name= sc.next();
