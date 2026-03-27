@@ -25,7 +25,7 @@ class ProductB implements BillGen
     }
 }
 
-public class bill 
+public class Bill 
 {
     public static void main(String[] args) 
     {
