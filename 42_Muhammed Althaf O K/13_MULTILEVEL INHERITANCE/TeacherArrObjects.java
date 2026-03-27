@@ -1,4 +1,4 @@
-package Program13;
+package OOPLAB;
 import java.util.Scanner;
 class Person
 {
