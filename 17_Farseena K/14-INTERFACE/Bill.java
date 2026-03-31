@@ -34,11 +34,11 @@ public class Bill {
 
         System.out.println("Enter no. of orders: ");
         int n = sc.nextInt();
-        sc.nextLine(); // buffer clear
+        sc.nextLine(); 
 
         ProductB[][] order = new ProductB[n][];
 
-        // INPUT SECTION
+    
         for (int i = 0; i < n; i++) {
             System.out.println("\nEnter no. of Products: ");
             int m = sc.nextInt();
@@ -48,7 +48,7 @@ public class Bill {
 
             for (int j = 0; j < m; j++) {
                 System.out.println("\nEnter Product " + (j + 1) + " Name: ");
-                String a = sc.nextLine();   // fixed (supports spaces)
+                String a = sc.nextLine();  
 
                 System.out.println("Enter Product ID: ");
                 int b = sc.nextInt();
@@ -58,7 +58,7 @@ public class Bill {
 
                 System.out.println("Enter Product Unit Price: ");
                 int d = sc.nextInt();
-                sc.nextLine(); // buffer clear
+                sc.nextLine();
 
                 ProductB pb = new ProductB(a, b, c, d);
                 order[i][j] = pb;
@@ -66,7 +66,7 @@ public class Bill {
             }
         }
 
-        // OUTPUT SECTION
+    
         for (int i = 0; i < n; i++) {
             int sum = 0;
 
