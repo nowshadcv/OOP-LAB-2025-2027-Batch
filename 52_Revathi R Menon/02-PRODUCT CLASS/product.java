@@ -2,58 +2,88 @@ package ooplab;
 
 import java.util.Scanner;
 
-class CPU {
-	double price;
-	class Processor{
-		double cores;
-		String manufacturer;
-		double getCache() {
-			return 4.3;
-		}
-	}
-	static class RAM {
-		double memory;
-		String manufacturer;
-		double getClockSpeed() {
-			return 5.5;
-		}
-	}
-
+public class Product {
+       String pname,pcode;
+       int price;
+       public Product() {}
+       public Product(String pname, String pcode, int price) {
+    	   this.pname = pname;
+    	   this.pcode = pcode;
+    	   this.price = price;
+       }
+       public void setPname(String pname){
+    	   this.pname = pname; }
+       public String getPcode() {
+    	   return pcode; }
+       public String getPname() {
+    	   return pname; }
+       public void setPcode(String pcode) {
+    	   this.pcode = pcode; }
+       public int getPrice() {
+    	   return price ; }
+       public void setPrice(int price) {
+    	   this.price = price; }
+       public void display() {
+    	   System.out.println("pcode: "+this.pcode);
+    	   System.out.println("pname: "+this.pname);
+    	   System.out.println("price: "+this.price+"\n");
+    	   
+       }
 }
-public class CPUDetails{
-	    public static void main(String[] args) {
 
-	        Scanner s = new Scanner(System.in);
+class cars{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
 
-	        CPU cpu = new CPU();
+        // Input for p1
+        Product p1 = new Product();
+        System.out.println("Enter details for product 1:");
+        System.out.print("Pcode: ");
+        p1.pcode = sc.nextLine();
+        System.out.print("Pname: ");
+        p1.pname = sc.nextLine();
+        System.out.print("Price: ");
+        p1.price = sc.nextInt();
+        sc.nextLine(); // consume newline
 
-	        CPU.Processor processor = cpu.new Processor();
-	        CPU.RAM ram = new CPU.RAM();
+        System.out.println("\nDisplaying p1:");
+        p1.display();
 
+        // Input for p2
+        System.out.println("Enter details for product 2:");
+        System.out.print("Pcode: ");
+        String pcode2 = sc.nextLine();
+        System.out.print("Pname: ");
+        String pname2 = sc.nextLine();
+        System.out.print("Price: ");
+        int price2 = sc.nextInt();
+        sc.nextLine(); // consume newline
 
-	        System.out.print("Enter number of cores: ");
-	        processor.cores = s.nextDouble();
+        Product p2 = new Product(pname2, pcode2, price2);
+        System.out.println("\nDisplaying p2:");
+        p2.display();
 
-	        System.out.print("Enter processor manufacturer: ");
-	        processor.manufacturer = s.next();
+        // Input for p3
+        System.out.println("Enter details for product 3:");
+        System.out.print("Pcode: ");
+        String pcode3 = sc.nextLine();
+        System.out.print("Pname: ");
+        String pname3 = sc.nextLine();
+        System.out.print("Price: ");
+        int price3 = sc.nextInt();
+        sc.nextLine(); // consume newline
 
-	        System.out.print("Enter RAM memory (GB): ");
-	        ram.memory = s.nextDouble();
+        Product p3 = new Product(pname3, pcode3, price3);
+        System.out.println("\nDisplaying p3:");
+        p3.display();
 
-	        System.out.print("Enter RAM manufacturer: ");
-	        ram.manufacturer = s.next();
+		
+        // Find product with lowest price
+        Product p = p3.getPrice() < (p1.price < p2.price ? p1.price : p2.price) ? p3 : (p1.price < p2.price ? p1 : p2);
+        System.out.println("\nDisplaying product with lowest price:");
+        p.display();
 
-	        // Displaying details
-	        System.out.println("\n----- CPU DETAILS -----");
-	        System.out.println("Processor Cores: " + processor.cores);
-	        System.out.println("Processor Manufacturer: " + processor.manufacturer);
-	        System.out.println("Processor Cache: " + processor.getCache());
-	        System.out.println("RAM Memory: " + ram.memory + " GB");
-	        System.out.println("RAM Manufacturer: " + ram.manufacturer);
-	        System.out.println("RAM Clock Speed: " + ram.getClockSpeed());
-
-	        s.close();
-	    }
+        sc.close();
 	}
-
-
+}
