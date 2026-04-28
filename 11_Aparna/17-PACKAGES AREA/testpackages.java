@@ -1,4 +1,4 @@
-package Program17;
+package OOPLAB;
 
 
 import figures.*;
