@@ -63,4 +63,4 @@ public class Bill {
 	    	System.out.println(" Net Amount :" + sum); 
 	    		System.out.println("-----------------------------------------------------------------------------------");
 	    		sc.close();
-}}}//End. 
+}}} 
