@@ -1,4 +1,4 @@
-package Test;
+package OOPLAB;
 import figures.*;
 import java.util.Scanner;
 
