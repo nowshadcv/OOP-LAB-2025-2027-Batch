@@ -1,4 +1,4 @@
-package Test;	
+package OOPLAB;	
 import arithmetic.ArithmeticOperations;
 import java.util.Scanner;
 
