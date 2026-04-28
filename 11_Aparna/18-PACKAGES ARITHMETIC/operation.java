@@ -1,5 +1,5 @@
 
-package Program18;
+package OOPLAB;
 import java.util.Scanner;
 import Arithmetic.*;
 public class operation 
