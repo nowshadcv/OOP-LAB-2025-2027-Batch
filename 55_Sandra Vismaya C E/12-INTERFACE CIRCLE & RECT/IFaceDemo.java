@@ -1,83 +1,107 @@
 package OOPLAB;
+
 import java.util.Scanner;
+
 interface AP{
 	void input();
 	void area();
 	void perimeter();
 }
-class circle implements AP{
-	int r = 0;
-	double pi = 3.14, area = 0, perimeter = 0;
+
+class Circle implements AP{
+	int r;
+	double pi=3.14,area,perimeter;
+	
 	public void input() {
-		Scanner c = new Scanner (System.in);
-		r = c.nextInt();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter radius :");
+		r=sc.nextInt();
 	}
+	
 	public void area() {
-		area = pi*r*r;
-		System.out.println("Area of circle : "+area);
+		area=pi * r * r;
+		System.out.println("Area of circle :" +area);
 	}
+	
 	public void perimeter() {
-		perimeter = 2*pi*r;
-		System.out.println("Perimeter of circle:" +perimeter);
+		perimeter=2 * pi * r;
+		System.out.println("Perimeter of circle :"+perimeter);
 	}
 }
-class rectangle implements AP{
-	int l = 0 , b = 0;
-	double area = 0, perimeter = 0;
+
+class Rectangle implements AP{
+	int l,b;
+	double area,perimeter;
+	
 	public void input() {
-		Scanner r = new Scanner (System.in);
-		l = r.nextInt();
-		b = r.nextInt();	
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter length :");
+		l=sc.nextInt();
+		
+		System.out.println("Enter breadth :");
+		b=sc.nextInt();
 	}
+	
 	public void area() {
-		area = l * b;
-		System.out.println("Area of Rectangle : "+area);
+		area=l * b;
+		System.out.println("Area of rectangle ="+area);
 	}
+	
 	public void perimeter() {
-		perimeter = 2 * (l + b);
-		System.out.println("Perimeter of Rectangle:" +perimeter);
+		perimeter=2 * ( l + b );
+		System.out.println("Perimeter of rectangle :"+perimeter);
 	}
 }
-class demo {
-	public static void main (String[] args) {
+
+public class IFaceDemo{
+	public static void main(String args[]) {
 		int ch;
-		circle c = new circle();
-		rectangle r = new rectangle();
-		Scanner sc = new Scanner (System.in);
-		System.out.println("1. Area of Circle");
-		System.out.println("2. Area of Rectangle");
-		System.out.println("3. Perimeter of Circle");
-		System.out.println("4. Perimeter of Rectangle");
-		System.out.println("5. Program termination");
-		lp: while (true) {
-			System.out.print("Make your choice:");
-			ch = sc.nextInt();
+		Circle c=new Circle();
+		Rectangle r=new Rectangle();
+		
+		Scanner sc=new Scanner(System.in);
+		
+		while(true)
+		{
+			System.out.println("\n 1.Area of circle :");
+			System.out.println(" 2.Area of rectangle :");
+			System.out.println(" 3.Perimeter of circle :");
+			System.out.println(" 4.Perimeter of rectangle :");
+			System.out.println(" 5.Exit :");
+			
+			System.out.print("\n Enter your choice :");
+			ch=sc.nextInt();
 			switch(ch) {
+				
 			case 1:
-				System.out.print("enter the radius of the circle \n");
 				c.input();
 				c.area();
 				break;
+				
 			case 2:
-				System.out.print("enter the length and breadth of the rectangle \n");
 				r.input();
 				r.area();
 				break;
-			case 3: 
-				System.out.print("enter the radius of the circle \n");
+				
+			case 3:
 				c.input();
 				c.perimeter();
 				break;
+				
 			case 4:
-				System.out.print("enter the length and breadth of the rectangle \n");
-				c.input();
-				c.area();
+				r.input();
+				r.perimeter();
 				break;
-			case 5: 
-				break lp;
+				
+			case 5:
+				System.out.println("Exiting program ....");
+				System.exit(0);
+				break;
+				
 			default:
-					System.out.println("Invalid choice! please make aa valid choice..");
+				System.out.println("Invalid choice !!!");
 			}
 		}
-	}
+	}	
 }
