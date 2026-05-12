@@ -1,69 +1,96 @@
 package OOPLAB;
 
 import java.util.Scanner;
-class EmployeeT{
+
+class Employee{
 	int empid;
 	String name;
-	float salary;
+	Float salary;
 	String address;
-	EmployeeT(){}
-	EmployeeT(int empid,String name,float salary,String address){
+	
+	Employee(int empid,String name,Float salary,String address){
 		this.empid=empid;
 		this.name=name;
 		this.salary=salary;
-		this.address=address;}
-	
+		this.address=address;
 	}
+}
 
-class Teacher extends EmployeeT{
-	String department,subject;
-	Teacher(int empid,String name,float salary,String address,String department,String subject){
+class Teacher extends Employee{
+	String department;
+	String subject;
+	
+	Teacher(int empid,String name,Float salary,String address,String department,String subject){
 		super(empid,name,salary,address);
 		this.department=department;
-		this.subject=subject;}
-	public void display() {
-		System.out.println("Teacher id : " + empid);
-		System.out.println("Teacher name : " + name);
-		System.out.println("Teacher salary : " + salary);
-		System.out.println("Teacher address : " + address);
-		System.out.println("Teacher department : " + department);
-		System.out.println("Teacher subject : " + subject);}
-
-		
+		this.subject=subject;
 	}
+	
+public void display() {
+	
+	System.out.println("\n Teacher Details :");
+	
+	System.out.println("ID :" + empid);
+	System.out.println("Name :" + name);
+	System.out.println("Salary :" + salary);
+	System.out.println("Address :" + address);
+	System.out.println("Department :" + department);
+	System.out.println("Subject :" + subject);
+	
+	}
+}
 
-class TeacherArrObjects{
-	public static void main(String[] args) {
-		System.out.println("Enter number of Teachers:");
-		Scanner sc=new Scanner(System .in);
-		int n =  sc.nextInt();
-		System.out.println("Enter Teacher details one by one ..");
-		Teacher teacher[]=new Teacher[ n ];
-		Scanner scT = new Scanner (System.in);
-		int tid;String name;Float salary;String address;
-		String department;String subject;
-		for (int i=0;i<n;i++) {
-			System.out.println("Enter " + i + " Teacher details....");
-			System.out.println("Enter teacher id(integer):");
-			tid=scT.nextInt();
-			System.out.println("Enter teacher name(String):");
-			name=scT.next();
-			System.out.println("Enter teacher salary(float):");
-			salary=scT.nextFloat();
-			System.out.println("Enter teacher address(string):");
-			address=scT.next();
-			System.out.println("Enter teacher department(String):");
-			department=scT.next();
-			System.out.println("Enter teacher subject(string):");
-			subject=scT.next();
-			Teacher t=new Teacher(tid,name,salary,address,department,subject);
-			teacher[i]=t;
-		}
-		System.out.println("Teachers are :\n");
-		for(Teacher x : teacher) {
-			x.display();System.out.println("\n");
-		sc.close();
-		scT.close();
+class TeacherArrayObjects{
+	public static void main(String args[]) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter number of teachers :");
+		int n=sc.nextInt();
+		
+		Teacher [] t=new Teacher[n];
+		
+		for(int i=0;i<n;i++)
+		{
+			System.out.println("Enter Teacher "+(i+1)+ " Details :");
+			
+			System.out.print("Enter ID :" );
+			int id=sc.nextInt();
+			
+			System.out.print("Enter Name :" );
+			String name=sc.next();
+			
+			System.out.print("Enter Salary :" );
+			Float salary=sc.nextFloat();
+			
+			System.out.print("Enter Address :" );
+			String address=sc.next();
+			
+			System.out.print("Enter Department :" );
+			String department=sc.next();
+			
+			System.out.print("Enter Subject :" );
+			String subject=sc.next();
+			
+			t[i]=new Teacher(id,name,salary,address,department,subject);
+			
+			for(i=0;i<n;i++)
+			{
+				t[i].display();
+				sc.close();
+			}
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
